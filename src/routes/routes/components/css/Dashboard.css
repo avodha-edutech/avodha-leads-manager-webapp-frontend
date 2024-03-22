@@ -1,0 +1,145 @@
+.dashboard
+{
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5466ab; 
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+background: #475591; 
+}
+
+.sidebar
+{
+  background-color: #101424;
+  transition: 0.2s;
+  height: 100vh;
+  min-height: 100vh;
+  width: 80vw;
+  overflow-x: hidden;
+  position: fixed;
+}
+
+
+.open-toggle
+{
+  margin-left: 80vw;
+}
+
+@media (min-width: 500px)
+{
+  .sidebar
+  {
+    width: 70vw;
+  }
+
+  .open-toggle
+  {
+    margin-left: 70vw;
+  }
+}
+
+@media (min-width: 1000px)
+{
+  .sidebar
+  {
+    width: 20vw;
+  }
+
+  .open-toggle
+  {
+    margin-left: 20vw;
+  }
+}
+
+.profile
+{
+  height: 140x;
+  width: 140px;
+  border-radius: 50px;
+}
+
+.down
+{
+  border-bottom: 2px solid #333e6c;
+}
+
+.options
+{
+  border-top: 2px solid #333e6c;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  font-family: Poppins;
+  cursor: pointer;
+}
+
+.options:hover
+{
+   background-color: #5e7ae0;
+}
+
+.options:active
+{
+  background-color: #42569c;
+}
+
+h4
+{
+    color: white;
+    font-family: Montserrat;
+}
+
+.work-space
+{
+  padding: 15px;
+  position: relative;
+  transition: 0.2s;
+  background-color: #151a2e;
+}
+
+.toggle-button
+{
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 26px;
+  transition: 0.2s;
+}
+
+.toggle-button:hover
+{
+  color: rgb(195, 195, 195);
+}
+
+.toggle-button:active
+{
+  transform: scale(0.88);
+}
+
+.close-sidebar
+{
+  width: 0vw !important;
+}
+
+.main-work-space
+{
+  padding: 20px;
+}
+
+.selected
+{
+  background-color: #5e7ae0 !important; 
+}
+
+.selected:active
+{
+  background-color: #42569c !important; 
+}

@@ -1,0 +1,205 @@
+.main-div
+{
+    background: #151a2e;
+    top: 0;
+    left: 0;
+    height: 100% !important;
+    width: 100%;
+    z-index: -1000;
+    min-height: 100vh;
+}
+
+.sub-main-div
+{
+    padding: 50px;
+    animation: appear 0.5s 1 ease-in-out;
+}
+
+.data-div
+{
+    padding: 20px;
+    background: #1e2642c9;
+    border-radius: 10px;
+}
+
+.form
+{
+    padding: 5px;
+}
+
+h3
+{
+    font-family: Poppins;
+    color: white;
+}
+
+.main-button
+{
+    padding: 8px;
+    width: 220px;
+    font-size: 18px;
+    font-family: Poppins;
+    color: white;
+    border-radius: 6px;
+    background-image: linear-gradient(to right, #FA6DBE, #FA6DA4 );
+    border: none;
+    animation: appear 0.5s 1 ease-in;
+    transition: 0.2s;
+}
+
+.main-button:hover
+{
+    background-image: linear-gradient(to right, #f64bac, #f64287 );
+}
+
+.main-button:active
+{
+    background-image: linear-gradient(to right, #f739a5, #f82a79 );
+    transform: scale(0.92);
+}
+
+@keyframes appear
+{
+    from
+    {
+        opacity: 0%;
+    }
+    to
+    {
+        opacity: 100%;
+    }
+}
+  
+  @keyframes mulShdSpin {
+    0%,
+    100% {
+      box-shadow: 0 -3em 0 0.2em, 
+      2em -2em 0 0em, 3em 0 0 -1em, 
+      2em 2em 0 -1em, 0 3em 0 -1em, 
+      -2em 2em 0 -1em, -3em 0 0 -1em, 
+      -2em -2em 0 0;
+    }
+    12.5% {
+      box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 
+      3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, 
+      -2em 2em 0 -1em, -3em 0 0 -1em, 
+      -2em -2em 0 -1em;
+    }
+    25% {
+      box-shadow: 0 -3em 0 -0.5em, 
+      2em -2em 0 0, 3em 0 0 0.2em, 
+      2em 2em 0 0, 0 3em 0 -1em, 
+      -2em 2em 0 -1em, -3em 0 0 -1em, 
+      -2em -2em 0 -1em;
+    }
+    37.5% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+       3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, 
+       -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    50% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+       3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, 
+       -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    62.5% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+       3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, 
+       -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+    }
+    75% {
+      box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 
+      3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, 
+      -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+    }
+    87.5% {
+      box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 
+      3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, 
+      -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+    }
+  }
+
+input, label, select
+{
+    display: block;
+}
+
+h4
+{
+    color: white;
+    font-family: Montserrat;
+}
+  
+label
+{
+    color: white;
+    font-family: Montserrat;
+}
+
+.loader
+{
+    font-size: 6px !important;
+}
+
+.main-input
+{
+    width: 150px;
+    border: 2px solid #FA6DBE;
+    outline: #FA6DBE;
+    font-size: 16px;
+    padding: 5px;
+    color: white;
+    font-family: Poppins;
+    border-radius: 5px;
+    background: transparent;
+    transition: 0.2s;
+}
+
+.main-input:focus,.form-control:focus
+{
+    box-shadow: 0 0 10px #f764b7 !important;
+}
+
+@media (min-width: 300px)
+{
+    .main-input
+    {
+        width: 170px;
+    }
+}
+
+@media (min-width: 400px)
+{
+    .main-input
+    {
+        width: 270px;
+    }
+}
+
+@media (min-width: 500px)
+{
+    .main-input
+    {
+        width: 300px;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #5466ab; 
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+	background: #475591; 
+}
+
+option
+{
+    color: white;
+    font-family: poppins;
+    background: #3b437c;
+    font-size: 17px;
+}

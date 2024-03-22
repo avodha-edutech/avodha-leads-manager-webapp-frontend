@@ -1,0 +1,95 @@
+.error-main-div
+{
+    background: #151a2e;
+    top: 0;
+    left: 0;
+    border: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1000;
+    position: fixed;
+}
+
+.error-image
+{
+    margin-top: 30px;
+    animation: appear 0.5s 1 ease-in;
+}
+
+
+.main-button
+{
+    padding: 8px;
+    width: 220px;
+    font-size: 18px;
+    font-family: Poppins;
+    color: white;
+    border-radius: 6px;
+    background-image: linear-gradient(to right, #FA6DBE, #FA6DA4 );
+    border: none;
+    animation: appear 0.5s 1 ease-in;
+    transition: 0.2s;
+}
+
+.main-button:hover
+{
+    background-image: linear-gradient(to right, #f64bac, #f64287 );
+}
+
+.main-button:active
+{
+    background-image: linear-gradient(to right, #f739a5, #f82a79 );
+    transform: scale(0.92);
+}
+
+@keyframes appear
+{
+    from
+    {
+        opacity: 0%;
+    }
+    to
+    {
+        opacity: 100%;
+    }
+}
+
+
+@media (min-width: 500px)
+{
+    .error-image
+    {
+        width: 350px;
+        width: 350px;
+    }
+}
+
+@media (min-width: 1000px)
+{
+    .error-image
+    {
+        width: 3700px;
+        width: 370px;
+    }
+}
+
+.refresh-icon
+{
+    margin-left: 5px;
+}
+
+.rotate
+{
+    animation: rotate 0.6s ease-in-out infinite;
+}
+
+@keyframes rotate
+{
+    from
+    {
+        transform: rotate(0deg);
+    } to
+    {
+        transform: rotate(360deg);
+    }
+}
