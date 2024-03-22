@@ -183,7 +183,7 @@ label
 
 .main-input
 {
-    width: 150px;
+    width: 210px;
     border: 2px solid #FA6DBE;
     outline: #FA6DBE;
     font-size: 16px;
@@ -212,12 +212,12 @@ label
 {
     .main-input
     {
-        width: 170px;
+        width: 220px;
     }
 
     .form-control,.country-list
     {
-        width: 170px !important;
+        width: 220px !important;
     }
 }
 
@@ -225,12 +225,12 @@ label
 {
     .main-input
     {
-        width: 270px;
+        width: 320px;
     }
 
     .form-control,.country-list
     {
-        width: 270px !important;
+        width: 320px !important;
     }
 }
 
@@ -238,12 +238,12 @@ label
 {
     .main-input
     {
-        width: 300px;
+        width: 330px;
     }
 
     .form-control,.country-list
     {
-        width: 300px !important;
+        width: 330px !important;
     }
 }
 
