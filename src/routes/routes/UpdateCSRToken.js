@@ -41,7 +41,7 @@ const UpdateCSRToken = () => {
 
         } else
         {
-            localStorage.clear('isLogin');
+            localStorage.removeItem('isLogin');
             navigate('/logavodhaleadsin');
         }
 
@@ -94,7 +94,7 @@ const UpdateCSRToken = () => {
                         setSuccessMsg(false);
                     } else
                     {
-                        localStorage.clear('isLogin');
+                        localStorage.removeItem('isLogin');
                         navigate('/logavodhaleadsin');
                     }
                 }

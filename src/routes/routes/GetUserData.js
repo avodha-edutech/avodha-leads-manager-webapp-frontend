@@ -119,7 +119,7 @@ const GetUserData = () => {
                             setFormScreen(false);
                         } else
                         {
-                            localStorage.clear('isLogin');
+                            localStorage.removeItem('isLogin');
                             navigate('/logavodhaleadsin');
                         }
                     }

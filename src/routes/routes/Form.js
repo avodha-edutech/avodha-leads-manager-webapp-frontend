@@ -196,7 +196,7 @@ const Form = () => {
                             setButtonState(true);
                         } else if(data.data.code === "ER006")
                         {
-                            localStorage.clear('token');
+                            localStorage.removeItem('token');
                             setToken({status: true, value: null});
                             setEmptyErr(false);
                             setRandomErr(false);

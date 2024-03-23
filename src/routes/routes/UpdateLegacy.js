@@ -103,7 +103,7 @@ const UpdateLegacy = () => {
                             setSuccessMsg(false);
                         } else
                         {
-                            localStorage.clear('isLogin');
+                            localStorage.removeItem('isLogin');
                             navigate('/logavodhaleadsin');
                         }
                     }

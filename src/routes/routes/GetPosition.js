@@ -122,7 +122,7 @@ const GetPosition = () => {
                             } else if(data.data.code === "ER006")
                             {
 
-                                localStorage.clear('financeToken');
+                                localStorage.removeItem('financeToken');
                                 setToken(true);
 
                                 setTokenEmptyErr(false);

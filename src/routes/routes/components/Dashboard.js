@@ -32,17 +32,17 @@ const Dashboard = (props) => {
             if(data.data.status === true)
             {
 
-                localStorage.clear('isLogin');
+                localStorage.removeItem('isLogin');
                 navigate('/logavodhaleadsin');
 
             } else
             {
-                localStorage.clear('isLogin');
+                localStorage.removeItem('isLogin');
                 navigate('/logavodhaleadsin');
             }
 
         }).catch((e) => {
-            localStorage.clear('isLogin');
+            localStorage.removeItem('isLogin');
             navigate('/logavodhaleadsin');
         });
     }
