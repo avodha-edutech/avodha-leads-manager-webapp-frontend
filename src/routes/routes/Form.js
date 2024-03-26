@@ -40,6 +40,7 @@ const Form = () => {
     const [databaseExists, setDatabaseExists] = useState(false);
     const [successAlert, setSuccessAlert] = useState(false);
     const [buttonState, setButtonState] = useState(true);
+    const [timeLimitErr, setTimeLimitErr] = useState(false);
 
     const [submitSpinner, setSubmitSpinner] = useState(false);
 
@@ -137,6 +138,7 @@ const Form = () => {
                 setHubspotExists(false);
                 setDatabaseExists(false);
                 setSuccessAlert(false);
+                setTimeLimitErr(false);
                 setSubmitSpinner(true);
                 setButtonState(false);
 
@@ -159,6 +161,7 @@ const Form = () => {
                     if(data.data.status === true)
                     {
                         setEmptyErr(false);
+                        setTimeLimitErr(false);
                         setRandomErr(false);
                         setTokenEmpty(false);
                         setInvalidToken(false);
@@ -173,6 +176,7 @@ const Form = () => {
                         if(data.data.code === "ER001")
                         {
                             setEmptyErr(false);
+                            setTimeLimitErr(false);
                             setRandomErr(true);
                             setTokenEmpty(false);
                             setInvalidToken(false);
@@ -185,6 +189,7 @@ const Form = () => {
                         } else if(data.data.code === "ER010")
                         {
                             setEmptyErr(false);
+                            setTimeLimitErr(false);
                             setRandomErr(false);
                             setTokenEmpty(true);
                             setInvalidToken(false);
@@ -199,6 +204,7 @@ const Form = () => {
                             localStorage.removeItem('token');
                             setToken({status: true, value: null});
                             setEmptyErr(false);
+                            setTimeLimitErr(false);
                             setRandomErr(false);
                             setTokenEmpty(false);
                             setInvalidToken(true);
@@ -211,6 +217,7 @@ const Form = () => {
                         } else if(data.data.code === "ER002")
                         {
                             setEmptyErr(true);
+                            setTimeLimitErr(false);
                             setRandomErr(false);
                             setTokenEmpty(false);
                             setInvalidToken(false);
@@ -223,6 +230,7 @@ const Form = () => {
                         } else if(data.data.code === "ER003")
                         {
                             setEmptyErr(false);
+                            setTimeLimitErr(false);
                             setRandomErr(false);
                             setTokenEmpty(false);
                             setInvalidToken(false);
@@ -235,6 +243,7 @@ const Form = () => {
                         } else if (data.data.code === "ER013")
                         {
                             setEmptyErr(false);
+                            setTimeLimitErr(false);
                             setRandomErr(false);
                             setTokenEmpty(false);
                             setInvalidToken(false);
@@ -247,6 +256,7 @@ const Form = () => {
                         } else if(data.data.code === "ER012")
                         {
                             setEmptyErr(false);
+                            setTimeLimitErr(false);
                             setRandomErr(false);
                             setTokenEmpty(false);
                             setInvalidToken(false);
@@ -256,9 +266,23 @@ const Form = () => {
                             setSuccessAlert(false);
                             setSubmitSpinner(false);
                             setButtonState(true);
+                        } else if(data.data.code === "ER019")
+                        {
+                            setEmptyErr(false);
+                            setTimeLimitErr(true);
+                            setRandomErr(false);
+                            setTokenEmpty(false);
+                            setInvalidToken(false);
+                            setFormatErr(false);
+                            setHubspotExists(false);
+                            setDatabaseExists(false);
+                            setSuccessAlert(false);
+                            setSubmitSpinner(false);
+                            setButtonState(true);
                         } else
                         {
                             setEmptyErr(false);
+                            setTimeLimitErr(false);
                             setRandomErr(true);
                             setTokenEmpty(false);
                             setInvalidToken(false);
@@ -273,6 +297,7 @@ const Form = () => {
 
                     }).catch((e) => {
                         setEmptyErr(false);
+                        setTimeLimitErr(false);
                         setRandomErr(true);
                         setTokenEmpty(false);
                         setInvalidToken(false);
@@ -287,6 +312,7 @@ const Form = () => {
                 } catch(e)
                 {
                     setEmptyErr(false);
+                    setTimeLimitErr(false);
                     setRandomErr(true);
                     setTokenEmpty(false);
                     setInvalidToken(false);
@@ -301,6 +327,7 @@ const Form = () => {
             } else
             {
                 setEmptyErr(true);
+                setTimeLimitErr(false);
                 setRandomErr(false);
                 setTokenEmpty(false);
                 setInvalidToken(false);
@@ -315,6 +342,7 @@ const Form = () => {
         } else
         {
             setEmptyErr(false);
+            setTimeLimitErr(false);
             setRandomErr(false);
             setTokenEmpty(true);
             setInvalidToken(false);
@@ -382,6 +410,12 @@ const Form = () => {
     const alreadyExistsDatabaseError = (
         <div className="d-flex justify-content-center align-items-center mt-4">
             <Alert severity="error" className="mt-3">Data already exists in database</Alert>
+        </div>
+    );
+
+    const timeLimitError = (
+        <div className="d-flex justify-content-center align-items-center mt-4">
+            <Alert severity="error" className="mt-3">Time limit exceeded</Alert>
         </div>
     );
 
@@ -489,6 +523,7 @@ const Form = () => {
             {(hubspotExists)&&hubspotExists ? alreadyExistsHubspotError : null}
             {(databaseExists)&&databaseExists ? alreadyExistsDatabaseError : null}
             {(successAlert)&&successAlert ? successMsg : null}
+            {(timeLimitErr)&&timeLimitErr ? timeLimitError : null}
             {(submitSpinner)&&submitSpinner ? loadinSpinner : null}
             {(buttonState)&&buttonState ? submitButton : null}   
         </div>
