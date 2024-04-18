@@ -250,8 +250,8 @@ const GetUserData = () => {
                     <h4 className="text-center mt-2">Language: {properCase((response).langauge&&response.langauge)}</h4>
                     <h4 className="text-center mt-2">Mode: {properCase((response).mode&&response.mode)}</h4>
                     <h4 className="text-center mt-2">Leads Given Count: {(response).count&&response.count}</h4>
-                    <h4 className="text-center mt-2">Legacy Count: {(response).legacy&&response.legacy}</h4>
                     <h4 className="text-center mt-2">Position: {(response).position&&response.position}</h4>
+                    <h4 className="text-center mt-2">Legacy Count: {(response).legacy&&response.legacy}</h4>
                     <div className="d-flex justify-content-center align-items-center mt-3 p-4">
                         <button className="main-button" onClick={refreshFunction}>Okay</button>
                     </div>
